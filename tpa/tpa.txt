@@ -1,0 +1,9 @@
+1.Crearea un director nou numit „cli-project” folosind comanda mkdir:
+mkdir cli-project
+2. Navigarea în directorul „cli-project” folosind comanda cd:
+cd cli-project
+3. Crearea unui fișier nou numit „index.html” folosind comanda touch:
+touch index.html
+4. Deschiderea fișierului „index.html” folosind un editor de text sau un editor de text în
+linie de comandă precum Vim:
+vim index.html
