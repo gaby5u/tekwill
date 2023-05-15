@@ -1,0 +1,20 @@
+h1, nav{
+  display: inline-block;
+}
+h1, .bar-nav {
+  color: #6e91d3;
+}
+.bar-nav{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.image1{
+  width: 100%;
+  height: auto;
+}
+#author{
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(96, 165, 96);
+  color: white;
+}
