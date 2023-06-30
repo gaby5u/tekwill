@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet"/>
+    <title>About</title>
+</head>
+
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Enter country name">
+        <button id="search-button">Search</button>
+        <select id="sort-select">
+            <option value="name">Sort by Name</option>
+            <option value="population">Sort by Population</option>
+            <option value="area">Sort by Area</option>
+            <option value="currency">Sort by currency code</option>
+        </select>
+    </div>
+
+    <div class="search-container-currency">
+      <input type="text" id="search-input-currency" placeholder="Enter currency code">
+      <button id="search-button-currency">Search</button>
+  </div>
+    <div id="countries"></div>
+    <script src="script.js"></script>
+</body>
+</html>
