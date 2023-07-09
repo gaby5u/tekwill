@@ -1,46 +1,19 @@
 import { ENTER_KEY} from './search.js';
 import createCountryContainer from './createCountryContainer.js';
 
-// const createCountryContainer = (country) =>
-// {
-//   const container = document.createElement('div');
-//   container.className = 'country-container';
-//   container.id = 'country-details';
+//import from lodash
+// import { clonesDeep } from 'lodash';
 
-//   const flagImg = document.createElement('img');
-//   flagImg.setAttribute('src', country.flags.png);
-//   container.appendChild(flagImg);
-
-//   const name = document.createElement('h2');
-//   name.textContent = "Name: "+country.name.common;
-//   container.appendChild(name);
-
-//   const population = document.createElement('h5');
-//   population.textContent = "Population: "+country.population;
-//   container.appendChild(population);
-
-//   if (country.currencies)
-//   {
-//     const currencyKeys = Object.keys(country.currencies);
-//     const currencyCode = currencyKeys[0];
-//     const currency = country.currencies[currencyCode];
-//     const currencyElement = document.createElement('p');
-//     currencyElement.textContent = `Currency: ${currencyCode} - ${currency.name} (${currency.symbol})`;
-//     container.appendChild(currencyElement);
-//   }
-//   if (country.capital)
-//   {
-//     const capital = document.createElement('p');
-//     capital.textContent = "Capital: "+country.capital[0];
-//     container.appendChild(capital);
-//   }
-
-//   const continent = document.createElement('p');
-//   continent.textContent = "Continent: "+country.continents[0];
-//   container.appendChild(continent);
-
-//   return container;
+// const state = {
+//   shoppingCart: {product: 'bread', quantity: 5},
 // }
+
+// const copyState = Object.assign({}, state);
+
+// const cloneDeepState = cloneDeep(state);
+
+// state.shoppingCart.quantity = 7;
+// console.log(copyState, cloneDeepState)
 
 let countriesList = [];
 const fetchData = () =>{
@@ -58,54 +31,6 @@ const fetchData = () =>{
 }
 
 fetchData();
-
-
-//Regex
-// const regex = /^[a-zA-Z\s]+$/;
-// const searchCountry = (searchName) =>
-// {
-//   if (!regex.test(searchName))
-//   {
-//     alert("Input invalued! Introduetii doar litere si spatii.");
-//     return;
-//   }
-//   const url = `https://restcountries.com/v3.1/name/${searchName}`;
-//   fetch(url)
-//   .then(response => response.json())
-//   .then(countries =>{
-//     const countriesContainer = document.getElementById('countries');
-//     countriesContainer.innerHTML = '';
-//     countries.forEach(country =>
-//       {
-//         const countryContainer = createCountryContainer(country);
-//         countriesContainer.appendChild(countryContainer);
-//       })
-//   })
-//   .catch(error =>console.log(error));
-// };
-
-// const searchButton = document.getElementById('search-button');
-// searchButton.addEventListener('click', ()=>{
-//   const searchInput = document.getElementById('search-input');
-//   const searchName = searchInput.value.trim(); //trim() - removes whitespaces
-//   if (searchName!=='')
-//   {
-//     searchCountry(searchName);
-//   }
-//   else {
-//     fetchData();
-//   }
-// });
-// const searchInput = document.getElementById('search-input');
-// searchInput.addEventListener('keydown', (event) =>{
-
-//   console.log('Key: ' + event.key);
-//   if (event.key === 'Enter')
-//   {
-//     event.preventDefault();
-//     searchButton.click();
-//   }
-// });
 
 const SortOptions ={
   NAME: 'name',
