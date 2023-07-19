@@ -65,10 +65,21 @@ const updateCountries = (sortParam) =>{
   sortedCountries.forEach(country =>{
     const countryContainer = createCountryContainer(country);
     countriesContainer.appendChild(countryContainer);
-  })
+  });
+
+  localStorage.setItem('sortParam', sortParam);
 };
 
+const sortParamfromStorage = localStorage.getItem('sortParam');
+
 const sortSelect = document.getElementById('sort-select');
+// console.log(sortSelect.options);
+for (let i = 0; i <=3; i++){
+  if(sortSelect.options[i].value === sortParamfromStorage)
+  {
+    sortSelect.selectedIndex = i;
+  }
+}
 sortSelect.addEventListener('change',()=>{
   const sortParam = sortSelect.value;
   updateCountries(sortParam);
