@@ -1,55 +1,140 @@
 @media (min-width: 1900) {
   .form-container {
       width: 60%;
+    }
   }
-}
 
-@media (max-width: 1280px) {
+@media (max-width: 1100px) {
   body {
-      font-size: 20px;
-  }
-  .containers {
-    grid-template-columns: 1fr 1fr;
-   }
+    font-size: 20px;
+    }
+    .values-section .containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+    .box-container {
+    max-width: 600px;
+    }
+  
+    .flex-row h5 {
+    font-size: 16px;
+    }
+  
+    .card-item p {
+    font-size: 14px;
+    }
+
+    .values-section .containers-request, .values-section .team-members {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 }
 
-@media (max-width: 790px) {
-.main-content {
-  padding: 40px 0;
-}
-
-.values-section {
-  padding: 0 80px;
-}
-}
-
-@media (max-width: 1020px)
+@media (min-width: 1050px)
 {
-  .containers {
-    grid-template-columns: 0.70fr;
-    /* repeat(1, 320px);
-    grid-template-rows: repeat(2, 250px); */
-   }
+  .main-nav .nav-links {
+    display: flex;
+}
 }
 
-/* .containers {
-  grid-template-columns: 1fr 1fr;
- }
+@media (max-width: 1050px) {
+  .contact-section,  .mini-section {
+    padding: 0 10px;
+  }
 
- .box-container {
-  max-width: 600px;
- }
+  .author-rights-section {
+    padding-left: 10px;
+  }
 
- .card-item h5 {
-  font-size: 20px;
- }
+  .form-section .content-appointment {
+    display: flex;
+    flex-direction: column;
+  }
 
- .card-item p {
-  font-size: 16px;
- }
-} */
+  .form-section .content-appointment .box-container1 .form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+  }
 
-@media (max-width: 480px) {
+  .form-section .content-appointment .box-container1 .form-container input, select {
+    width: 450px;
+    height: 50px;
+  }
+
+  .form-section .content-appointment .box-container1 .form-container select,
+  .form-section .content-appointment .box-container1 .button1
+  {
+    width: 456px;
+  }
+
+  /* toggle */
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    background: url(https://i.postimg.cc/qq7WKZ1m/menu.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.menu-toggle.active {
+    width: 40px;
+    height: 40px;
+    background: url(https://i.postimg.cc/yNcK65Gc/close.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.main-nav .center {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav .nav-links {
+    display: none;
+}
+
+.main-nav .nav-links.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    top: 90px;
+    position: fixed;
+    z-index: 100;
+    background: white;
+    width: 100%;
+    height: calc(100% - 90px);
+}
+
+.main-nav .nav-links.active .main-nav-link {
+    color: black;
+}
+}
+
+ 
+@media (max-width: 890px) {
+  .main-content {
+    padding: 40px 0;
+  }
+
+  .values-section {
+    padding: 0 80px;
+  }
+}
+
+
+
+@media (max-width: 750px) {
   .box-container {
       padding: 12px;
   }
@@ -68,18 +153,30 @@
   .values-text {
       margin: 20px auto;
   }
-}
 
-/* @media (min-width: 1024px)
-{
-  .containers{
-    gap: 80px;
+  .mini-section {
+    height: 230px;
+  }
+
+  .mini-section .business-details, .contact-section .logo-social-media-row {
+    flex-direction: column;
+  }
+
+  .mini-section .business-details .button1 {
+    width: 456px;
+  }
+
+  .contact-section .main-container-contacts,  .container-links {
+    flex-direction: column;
+    gap: 0px;
+    padding-left: 30px;
+  }
+
+  .contact-section .main-container-contacts .container-links .container-link h5 {
+    font-size: 20px;
+  }
+
+  .contact-section .main-container-contacts .container-links .container-link .links a {
+    font-size: 16px;
   }
 }
-
-@media (max-width: 368px) {
-  .containers{
-    grid-template-columns: 320px;
-    grid-template-rows: repeat(6, 200px);
-  }
-} */

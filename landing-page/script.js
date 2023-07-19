@@ -1,3 +1,11 @@
+const toggleMenu = () => {
+  console.log ('clicked');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navigation = document.querySelector('.nav-links');
+  menuToggle.classList.toggle('active');
+  navigation.classList.toggle('active');
+}
+
 let country, continent, population;
 country="Germany";
 continent="Europe";
