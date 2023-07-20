@@ -9,7 +9,24 @@
 
 <body>
   <div id="loading-spinner"></div>
+
+  <div id="search-container">
+    <input type="text" id="postal-code-input" placeholder="Enter Postal Code">
+    <button onclick="searchProperties()">
+      <img class="magnifying-glass-button" src="../img/search.png">
+    </button>
+  </div>
+
   <div id="property-list"></div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div>
+        <span class="close-modal" onClick="closeModal()">&#x2715;</span>
+      </div>
+      <div id="modal-property"></div>
+    </div>
+  </div>
 
   <script type="module" src="script.js"></script>
 </body>
