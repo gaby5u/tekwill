@@ -1,0 +1,55 @@
+#property-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.property-card{
+  width: 300px;
+  margin: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #c9c9c9;
+}
+
+.property-card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+}
+
+.property-card .price {
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+#loading-spinner {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 400px auto;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #ff0000;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+ 
