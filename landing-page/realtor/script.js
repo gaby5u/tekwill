@@ -64,6 +64,16 @@ const fetchData = () => {
 
 let favoriteProperties = [];
 
+const loadFavoritePropertiesFromLocalStorage = () => {
+  const favoritePropertiesFromLocalStorage = localStorage.getItem('favoriteProperties');
+  if(favoritePropertiesFromLocalStorage)
+  {
+    favoriteProperties = JSON.parse(favoritePropertiesFromLocalStorage);
+  }
+}
+
+loadFavoritePropertiesFromLocalStorage();
+
 const createPropertyCard = (property) => {
     const card = document.createElement('div');
     card.className = 'property-card';
@@ -129,6 +139,8 @@ const toggleFavorite = (id, favoriteIcon) => {
   }
 
   // console.log(favoriteProperties);
+
+  localStorage.setItem('favoriteProperties', JSON.stringify(favoriteProperties));
 }
 
 const displayFavoriteProperties = () => {
