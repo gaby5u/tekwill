@@ -92,11 +92,32 @@
   height: 20px;
 }
 
-#search-container button {
+#search-container button{
   width: 40px;
   height: 30px;
   background-color: #ff0000;
   border-radius: 4px;
   border: none;
   margin-left: 10px;
+}
+
+.favorite-icon::before{
+  content: '\2764';
+  color: #a8a8a8;
+  font-size: 30px;
+}
+
+.favorite-icon.colored::before {
+  color: red;
+  font-size: 30px;
+}
+
+#favorite-tab {
+  margin-left: 10%;
+  background-color: #ff0000;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
+  padding: 5px 10px;
 }

@@ -22,6 +22,8 @@ const options = {
     }
   })
 };
+
+let properties = [];
 const fetchData = () => {
 
   const loadingSpinner = document.getElementById ('loading-spinner');
@@ -32,6 +34,11 @@ const fetchData = () => {
     searchContainer.style.display = 'none';
   }
 
+  const favoriteButton = document.getElementById('favorite-tab');
+  if (loadingSpinner.style.display === 'block') {
+    favoriteButton.style.display = 'none';
+  }
+
   const propertyList = document.getElementById('property-list');
   propertyList.innerHTML = ''; //de fiecare data cand se face request se va sterge valoarea locala
 //se face call nou
@@ -39,21 +46,25 @@ const fetchData = () => {
   fetch(url, options)
   .then(response => response.json())
   .then(data => {
-    const properties = data.data.home_search.results;
-    displayProperties(properties);
+    const propertiesData = data.data.home_search.results;
+    properties = propertiesData;
+    displayProperties();
     loadingSpinner.style.display = 'none';
 
     if (loadingSpinner.style.display === 'none') {
       searchContainer.style.display = 'flex';
-    }    
+    }   
+    
+    if (loadingSpinner.style.display === 'none') {
+      favoriteButton.style.display = 'flex';
+    }
   })
   .catch(error => console.log(error));
 }
 
-const displayProperties = (properties) => {
-  const propertyList = document.getElementById('property-list');
+let favoriteProperties = [];
 
-  properties.forEach (property => {
+const createPropertyCard = (property) => {
     const card = document.createElement('div');
     card.className = 'property-card';
 
@@ -78,13 +89,62 @@ const displayProperties = (properties) => {
     address.textContent = `${property.location.address.line} ${property.location.address.state}, ${property.location.address.state_code} ${property.location.address.postal_code}`;
     card.appendChild(address);
 
+    const favoriteIcon = document.createElement('div');
+    favoriteIcon.className = 'favorite-icon';
+    if (favoriteProperties.includes(property.listing_id)) {
+      favoriteIcon.classList.add('colored');
+    }
 
+    favoriteIcon.addEventListener('click', (event) => {
+      event.stopPropagation();
+      toggleFavorite(property.listing_id,favoriteIcon);
+    });
+
+    card.appendChild(favoriteIcon);
+
+    return card;
+}
+const displayProperties = () => {
+  const propertyList = document.getElementById('property-list');
+
+  properties.forEach (property => {
+    
+    const card = createPropertyCard(property);
     card.addEventListener ('click', () => openModal(property));
     propertyList.appendChild(card);
   })
 }
 
 fetchData();
+
+const toggleFavorite = (id, favoriteIcon) => {
+  const index = favoriteProperties.indexOf(id);
+
+  if (index === -1) {
+    favoriteProperties.push(id);
+    favoriteIcon.classList.add('colored');
+  } else {
+    favoriteProperties.splice(index, 1);
+    favoriteIcon.classList.remove('colored');
+  }
+
+  // console.log(favoriteProperties);
+}
+
+const displayFavoriteProperties = () => {
+  const favoritePropertiesContainer = document.getElementById('favorite-container');
+  favoritePropertiesContainer.innerHTML = '';
+
+  properties.forEach (property => {
+    if (favoriteProperties.includes(property.listing_id)) {
+    const card = createPropertyCard(property); 
+    card.addEventListener ('click', () => openModal(property));
+    favoritePropertiesContainer.appendChild(card);
+    }
+  })
+}
+
+window.displayFavoriteProperties = displayFavoriteProperties;
 
 const openModal = (property) => {
   const modal = document.getElementById ('modal');
@@ -102,7 +162,7 @@ const closeModal = () => {
   modal.style.display = 'none';
 }
 
-window.closeModal = closeModal; //ca html sa aiba acces la f-tiile din js
+window.closeModal = closeModal; 
 
 const searchProperties = () => {
   const postalCodeInput = document.getElementById('postal-code-input');
