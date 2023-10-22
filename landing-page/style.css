@@ -1,62 +1,62 @@
-:root{
-  --primary-color: #FFA62B;
-  --dark-background-color: #252B42;
-  --light-text-color: #FFFFFF;
+:root {
+  --primary-color: #ffa62b;
+  --dark-background-color: #252b42;
+  --light-text-color: #ffffff;
   --second-text-color: #737373;
-  --muted-color: #BDBDBD;
-  --secondary-color: #16697A;
+  --muted-color: #bdbdbd;
+  --secondary-color: #16697a;
 }
 
-body{
+body {
   margin: 0;
   background-color: var(--dark-background-color);
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
-.main-header{
+.main-header {
   color: #fff;
   height: auto;
 }
 
-.main-nav ul{
+.main-nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.main-nav{
+.main-nav {
   padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.main-nav-link:link{
+.main-nav-link:link {
   text-decoration: none;
 }
 
-.main-nav-link{
+.main-nav-link {
   color: #fff;
 }
 
-.box-container{
+.box-container {
   margin: 0 auto;
   max-width: 1000px;
 }
 
-.main-content{
+.main-content {
   color: var(--light-text-color);
   padding: 40px 140px;
   max-width: 500px;
 }
 
-.main-content .heading-primary{
+.main-content .heading-primary {
   text-align: center;
   font-size: 3.5rem;
   margin: 0;
 }
 
-.main-content h4{
+.main-content h4 {
   text-align: center;
   margin: 40px 0;
   font-weight: 100;
@@ -68,53 +68,54 @@ body{
   gap: 12px;
 }
 
-.cta-buttons button{
+.cta-buttons button {
   border-radius: 36px;
   height: 48px;
   width: 185px;
   color: var(--light-text-color);
 }
 
-.cta-buttons button:first-child{
+.cta-buttons button:first-child {
   background-color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
 
-.cta-buttons button:last-child{
+.cta-buttons button:last-child {
   background: transparent;
   border: 1px solid var(--light-text-color);
 }
 
-.values-text h2, .values-text p{
+.values-text h2,
+.values-text p {
   text-align: center;
   color: var(--light-text-color);
 }
 
-.values-section{
+.values-section {
   margin: 100px auto;
 }
 
-.values-text h2{
+.values-text h2 {
   font-size: 40px;
 }
 
-.values-text{
+.values-text {
   max-width: 1000px;
-  margin: 45px auto; 
+  margin: 45px auto;
 }
 
-.containers{
+.containers {
   display: grid;
   grid-template-columns: repeat(3, 320px);
   grid-template-rows: repeat(2, 200px);
   gap: 32px;
 }
 
-.containers div{
+.containers div {
   background-color: var(--light-text-color);
 }
 
-.flex-row{
+.flex-row {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -123,7 +124,7 @@ body{
   padding-left: 40px;
 }
 
-.card-item p{
+.card-item p {
   color: var(--second-text-color);
   font-size: 14px;
   padding: 0 40px;
@@ -136,23 +137,23 @@ body{
   height: 100vh;
 }
 
-.image-video{
+.image-video {
   position: relative;
   width: 100%;
 }
 
-.video-icon{
+.video-icon {
   position: absolute;
   width: 10%;
 }
 
-.video{
+.video {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.containers-request{
+.containers-request {
   display: flex;
   flex-direction: row;
   gap: 32px;
@@ -160,73 +161,73 @@ body{
   align-items: center;
 }
 
-.box{
+.box {
   background-color: var(--light-text-color);
   width: 327px;
   height: 244px;
   border-radius: 5px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   position: relative;
 }
 
-.card-item-request{
-  position: absolute; 
+.card-item-request {
+  position: absolute;
   top: 10%;
   left: 10%;
   right: 10%;
   bottom: 10%;
 }
 
-.card-item-request h6{
+.card-item-request h6 {
   font-size: 14px;
   line-height: 24px;
   color: var(--second-text-color);
   margin: 20px auto;
 }
 
-.person-who-requested{
+.person-who-requested {
   display: flex;
   justify-content: start;
 }
 
-.person-who-requested img{
+.person-who-requested img {
   width: 50px;
   height: 50px;
 }
 
-.person-who-requested h6{
+.person-who-requested h6 {
   margin: 0;
   font-size: 14px;
   line-height: 24px;
 }
 
-.name-requestor{
+.name-requestor {
   margin: auto 0;
   margin-left: 16px;
 }
 
-.name-requestor :first-child{
+.name-requestor :first-child {
   color: var(--primary-color);
 }
 
-.name-requestor :last-child{
+.name-requestor :last-child {
   color: var(--dark-background-color);
 }
 
-.team-members{
+.team-members {
   display: flex;
   flex-direction: row;
   gap: 32px;
   justify-content: space-around;
 }
-.box-team{
-  background-color: #FFFFFF;
+.box-team {
+  background-color: #ffffff;
   width: 328px;
   height: 373px;
 }
 
-.about-member h5{
-  font-family: 'Montserrat';
+.about-member h5 {
+  font-family: "Montserrat";
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
@@ -235,8 +236,8 @@ body{
   margin: 32px 0 4px;
 }
 
-.about-member h6{
-  font-family: 'Montserrat';
+.about-member h6 {
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -245,7 +246,7 @@ body{
   margin: 0;
 }
 
-.icons{
+.icons {
   margin-top: 4px;
   display: flex;
   flex-direction: row;
@@ -253,18 +254,18 @@ body{
   justify-content: center;
 }
 
-.form-section{
+.form-section {
   background-image: url(img/bg-appointment.png);
   background-size: cover;
   width: auto;
   height: 100vh;
 }
 
-.content-appointment{
+.content-appointment {
   padding-top: 45px;
 }
 
-.form-container{
+.form-container {
   display: grid;
   grid-template-columns: repeat(2, 286px);
   grid-template-rows: repeat(4, 50px);
@@ -273,38 +274,39 @@ body{
   margin-bottom: 30px;
 }
 
-.form-container *{
-  background-color: #F9F9F9;;
+.form-container * {
+  background-color: #f9f9f9;
   border-radius: 4px;
   color: var(--muted-color);
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
 }
 
-.form-container input:last-child{
+.form-container input:last-child {
   grid-area: 3 / 1 / 5 / 3;
   align-items: start;
 }
 
-.values-text-appointment{
+.values-text-appointment {
   max-width: 1000px;
   margin: 45px auto;
 }
 
-.values-text-appointment h2{
+.values-text-appointment h2 {
   font-size: 40px;
 }
 
-.values-text-appointment h2, .values-text-appointment h5{
+.values-text-appointment h2,
+.values-text-appointment h5 {
   color: var(--light-text-color);
   margin: 0;
 }
 
-.values-text-appointment h5{
+.values-text-appointment h5 {
   font-size: 16px;
   line-height: 24px;
 }
 
-.button1{
+.button1 {
   width: 218px;
   height: 58px;
   border-radius: 5px;
@@ -316,34 +318,34 @@ body{
   display: inline-block;
 }
 
-.mini-section{
-  background-color: #FAFAFA;
+.mini-section {
+  background-color: #fafafa;
   height: 142px;
 }
 
-.mini-section button{
+.mini-section button {
   width: 160px;
 }
 
-.business-details{
+.business-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 35px;
 }
 
-.text-business-details h3{
+.text-business-details h3 {
   font-size: 24px;
   color: var(--dark-background-color);
   margin: 10px 0;
 }
 
-.text-business-details p{
+.text-business-details p {
   font-size: 14px;
   color: var(--second-text-color);
 }
 
-.logo-social-media-row{
+.logo-social-media-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -351,28 +353,28 @@ body{
   margin-bottom: 40px;
 }
 
-.logo-social-media-row h3{
+.logo-social-media-row h3 {
   color: var(--light-text-color);
   font-size: 24px;
 }
 
-.social-media-icons{
+.social-media-icons {
   display: flex;
   gap: 15px;
 }
 
-.social-media-icons img{
+.social-media-icons img {
   object-fit: contain;
 }
 
 .line {
-  height: 1px; 
+  height: 1px;
   width: 100%;
   background-color: #364067;
   margin-bottom: 30px;
 }
 
-.main-container-contacts{
+.main-container-contacts {
   display: flex;
   justify-content: space-between;
 }
@@ -387,7 +389,8 @@ body{
   flex-direction: column;
 }
 
-.container-link h5, .container-get-in-touch h5{
+.container-link h5,
+.container-get-in-touch h5 {
   color: var(--light-text-color);
   font-size: 16px;
 }
@@ -398,7 +401,7 @@ body{
   gap: 12px;
 }
 
-.links a{
+.links a {
   text-decoration: none;
   color: var(--muted-color);
   font-size: 14px;
@@ -413,11 +416,11 @@ body{
 .container-get-in-touch input {
   width: 321px;
   height: 38px;
-  border: solid 1px #E6E6E6;
+  border: solid 1px #e6e6e6;
   border-radius: 4px;
 }
 
-.container-get-in-touch button{
+.container-get-in-touch button {
   background-color: var(--primary-color);
   position: absolute;
   right: -4px;
@@ -450,4 +453,3 @@ body{
   color: var(--light-text-color);
   padding-top: 30px;
 }
-
